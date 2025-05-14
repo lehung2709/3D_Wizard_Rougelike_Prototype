@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9e27114627b0142be37c10f8d2daf9, type: 3}
+  m_Name: SmallEarthBall
+  m_EditorClassIdentifier: 
+  ProjectileName: SmallFireBall
+  damageRangeRadius: 1
+  vel: 10
+  projectile: {fileID: 2145876869430289008, guid: ce5c68195d0d4c2458aa90a01b64f509, type: 3}

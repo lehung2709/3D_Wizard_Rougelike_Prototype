@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8a3b9bc2488974ebe31a99a932afe0, type: 3}
+  m_Name: SoundLibrary
+  m_EditorClassIdentifier: 
+  sounds:
+  - soundName: Walk
+    clip: {fileID: 8300000, guid: 735df2b7bc9dae3428a1bcbb848b5ff6, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 1
+  - soundName: Run
+    clip: {fileID: 8300000, guid: 4d68ded783a7b62408e7c9ccac8ac0f5, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 1
+  - soundName: Player_Hurt
+    clip: {fileID: 8300000, guid: 20c40c507e4ae54468a790a2f2902c36, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 0
+  - soundName: Hit
+    clip: {fileID: 8300000, guid: c5a17f5fdf0d9f94094589bc2b2d2e9c, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 0
+  - soundName: Btn
+    clip: {fileID: 8300000, guid: 7bbd5e74267b6bf498be64b0cba25db5, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 0
+  - soundName: GainXP
+    clip: {fileID: 8300000, guid: 31538a26ce887f34cb15433268c1fb6f, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 0
+  - soundName: Death
+    clip: {fileID: 8300000, guid: 7a24b412a019113468fbb5f0dd0a1db8, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 0
+  - soundName: CastSpell
+    clip: {fileID: 8300000, guid: e9f9456f3c7227944bafdc29d187fd7c, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 0
+  - soundName: CargoHold
+    clip: {fileID: 8300000, guid: 1cff8ae116ad4a140bf0c680570cd7cb, type: 3}
+    mixerGroup: {fileID: -4240622599531104097, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 1
+  - soundName: FireExplode
+    clip: {fileID: 8300000, guid: c5c239e2bde4bcb42a21605c7dab94c5, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 0
+  - soundName: WaterSplash
+    clip: {fileID: 8300000, guid: 4f0f3c07f5a421641b8050806f731efa, type: 3}
+    mixerGroup: {fileID: 791457381579128535, guid: ffacfeff1f4eb3644bd1bb9f5c9fafcd, type: 2}
+    loop: 0

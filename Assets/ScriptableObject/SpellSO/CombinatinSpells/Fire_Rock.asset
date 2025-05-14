@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cec6935c20ce7b4bb3ff234a69a76f5, type: 3}
+  m_Name: Fire_Rock
+  m_EditorClassIdentifier: 
+  spellName: FireRock
+  avatar: {fileID: 21300000, guid: 3b27209c2c74a82459cb326e07592c33, type: 3}
+  spellDesc: FireRock
+  manaCost: 50
+  damageScalingFactor: 2.5
+  damageRangeRadius: 1
+  vel: 25
+  projectile: {fileID: 1373819593699020, guid: 87d24cc80366169468a8e014b220e890, type: 3}
+  effects:
+  - Type: 0
+    duration: 3
+    intensity: 0.12
+  - Type: 1
+    duration: 1
+    intensity: 0

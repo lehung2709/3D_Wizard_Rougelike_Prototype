@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af853a7fcc1f974c9da90f1e43915dc, type: 3}
+  m_Name: BlackWizardStatsSO
+  m_EditorClassIdentifier: 
+  MaxHealth: 150
+  MoveSpeed: 3
+  Damage: 30
+  AttackCooldown: 3
+  statusEffectDetails:
+  - Type: 2
+    duration: 1
+    intensity: 0.5

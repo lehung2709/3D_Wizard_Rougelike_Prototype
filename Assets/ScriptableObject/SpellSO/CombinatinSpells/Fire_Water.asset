@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cec6935c20ce7b4bb3ff234a69a76f5, type: 3}
+  m_Name: Fire_Water
+  m_EditorClassIdentifier: 
+  spellName: Wind
+  avatar: {fileID: 21300000, guid: 79817b5452ddd9940aa768ca7f57ce3a, type: 3}
+  spellDesc: Wind
+  manaCost: 50
+  damageScalingFactor: 1.2
+  damageRangeRadius: 1
+  vel: 10
+  projectile: {fileID: 1373819593699020, guid: a58b8c84a62da2d4eb14001dbe108efe, type: 3}
+  effects:
+  - Type: 2
+    duration: 3
+    intensity: 1

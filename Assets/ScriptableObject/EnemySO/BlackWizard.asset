@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df0418445fce5e44bb8b4f890c5f3f9c, type: 3}
+  m_Name: BlackWizard
+  m_EditorClassIdentifier: 
+  enemyName: BlackWizard
+  prefab: {fileID: 6655346826853541507, guid: fef987290945bc643acf8d780241fb92, type: 3}
+  stats: {fileID: 11400000, guid: c804c1e7d5dbf104daa664f7552a13a5, type: 2}
+  difficultyPoint: 1
