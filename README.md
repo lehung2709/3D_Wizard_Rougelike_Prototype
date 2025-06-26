@@ -9,6 +9,9 @@ Include various power-ups (e.g., spells, stat boosts, spirits), XP Crystal colle
 -Audio System:
 Custom audio system integrated with Unity’s Audio Mixer, allowing adjustable volume levels for master, music, and sound effects (SFX).
 
+-Animation:Add commentMore actions
+Use an Animation Controller and Blend Tree to create smooth transitions between player animations.
+
 -Design Patterns:
 Singleton, Object Pooling.
 ## youtube:
