@@ -3,12 +3,6 @@
 -NavMesh Integration:
 Utilize NavMesh for enemy movement and pathfinding.
 
--Player Controller:
-Implement a player controller using the Unity Input System for responsive and flexible input handling.
-
--Animation:
-Use an Animation Controller and Blend Tree to create smooth transitions between player animations.
-
 -Basic Roguelike Mechanics:
 Include various power-ups (e.g., spells, stat boosts, spirits), XP Crystal collection, and status effects (e.g., burn, slow).
 
