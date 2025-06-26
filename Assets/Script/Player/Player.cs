@@ -179,6 +179,7 @@ public class Player : MonoBehaviour
     private void Death()
     {
         AudioManager.Instance.SpawnSoundEmitter(transform, "Death", Vector3.zero);
+        this.gameObject.SetActive(false);
     }    
 
    
