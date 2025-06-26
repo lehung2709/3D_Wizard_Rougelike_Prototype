@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -12,10 +9,10 @@ public class Player : MonoBehaviour
     public PlayerStats stats;
     private SpellsManager spellsManager;
     [SerializeField] public float shootTimeHolder=0.5f;
-    [SerializeField] private float moveSpeed=0.0f;
-    [SerializeField] private float runSpeed = 6.0f;
-    [SerializeField] private float walkSpeed = 3.0f;
-    [SerializeField] private float changeSS;
+    [SerializeField] private float moveSpeedAnimValue=0.0f;
+    [SerializeField] private float runSpeedAnimValue = 6.0f;
+    [SerializeField] private float walkSpeedAnimValue = 3.0f;
+    [SerializeField] private float changeSpeedAnimValueRate=5.0f;
     [SerializeField] private float rotateSpeed = 10.0f;
     [SerializeField] private float angle;
     [SerializeField] private float sin;
@@ -44,7 +41,6 @@ public class Player : MonoBehaviour
     {
         RotateHandler();
         MoveHandler();
-        CalculateSinCosAngle();
         AudioHandler();
     }
     
@@ -63,29 +59,39 @@ public class Player : MonoBehaviour
     }    
     private void RotateHandler()
     {
-        if (PlayerInput.AimInput != Vector3.zero && stats.IsNotStunned)
+        if (stats.IsNotStunned)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(PlayerInput.AimInput);
-            rb.rotation = Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * rotateSpeed);
-            if (PlayerInput.MoveInput != Vector3.zero)
+            if (PlayerInput.AimInput != Vector3.zero)
             {
-                moveSpeed = Mathf.Lerp(moveSpeed, walkSpeed, Time.deltaTime * changeSS);
+                Quaternion targetRotation = Quaternion.LookRotation(PlayerInput.AimInput);
+                rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * rotateSpeed));
+            }
+            else if (PlayerInput.MoveInput != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(PlayerInput.MoveInput);
+                rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * rotateSpeed));
             }
 
-        }
-        else if (PlayerInput.MoveInput != Vector3.zero && stats.IsNotStunned)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(PlayerInput.MoveInput);
-            rb.rotation = Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * rotateSpeed);
-            moveSpeed = Mathf.Lerp(moveSpeed, runSpeed, Time.fixedDeltaTime * changeSS);
+            if (PlayerInput.MoveInput != Vector3.zero && PlayerInput.AimInput != Vector3.zero)
+            {
+                moveSpeedAnimValue = Mathf.Lerp(moveSpeedAnimValue, walkSpeedAnimValue, Time.fixedDeltaTime * changeSpeedAnimValueRate);
+                CalculateSinCosAngle();
+            }
+            else if (PlayerInput.MoveInput != Vector3.zero)
+            {
+                moveSpeedAnimValue = Mathf.Lerp(moveSpeedAnimValue, runSpeedAnimValue, Time.fixedDeltaTime * changeSpeedAnimValueRate);
+            }
+            else
+            {
+                moveSpeedAnimValue = Mathf.Lerp(moveSpeedAnimValue, 0.0f, Time.fixedDeltaTime * changeSpeedAnimValueRate);
+            }
         }
         else
         {
-            moveSpeed = Mathf.Lerp(moveSpeed, 0.0f, Time.fixedDeltaTime * changeSS);
+            moveSpeedAnimValue = Mathf.Lerp(moveSpeedAnimValue, 0.0f, Time.fixedDeltaTime * changeSpeedAnimValueRate);
         }
 
-        
-        animator.SetFloat("Speed", moveSpeed);
+        animator.SetFloat("Speed", moveSpeedAnimValue);
 
 
 
@@ -105,7 +111,7 @@ public class Player : MonoBehaviour
                       audioEmitter = AudioManager.Instance.SpawnSoundEmitter(transform, "Walk", Vector3.zero);
                       isRun=false;
                       isMove = true;
-                   }    
+                   }   
                    
                     
                 } 
