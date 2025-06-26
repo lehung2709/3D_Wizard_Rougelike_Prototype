@@ -142,8 +142,7 @@ public class Player : MonoBehaviour
         if (moveDir != Vector3.zero && aimDir != Vector3.zero)
         {
             
-            angle = Vector3.Angle(moveDir, aimDir);
-
+            angle = Vector3.SignedAngle(aimDir, moveDir,Vector3.up);
             
             float angleRad = angle * Mathf.Deg2Rad;
 
