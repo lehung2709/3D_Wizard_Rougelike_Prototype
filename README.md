@@ -7,7 +7,7 @@ Utilize NavMesh for enemy movement and pathfinding.
 Include various power-ups (e.g., spells, stat boosts, spirits), XP Crystal collection, and status effects (e.g., burn, slow).
 
 -Audio System:
-Custom audio system integrated with Unity’s Audio Mixer, allowing adjustable volume levels for master, music, and sound effects (SFX).
+Audio system integrated with Unity’s Audio Mixer, allowing adjustable volume levels for master, music, and sound effects (SFX).
 
 -Animation:Add commentMore actions
 Use an Animation Controller and Blend Tree to create smooth transitions between player animations.
